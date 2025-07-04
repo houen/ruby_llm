@@ -75,7 +75,7 @@ module RubyLLM
           return model_id unless model_data['inferenceTypesSupported']&.include?('INFERENCE_PROFILE')
           return model_id if model_data['inferenceTypesSupported']&.include?('ON_DEMAND')
 
-          "eu.#{model_id}"
+          "#{model_id}"
         end
       end
     end
